@@ -13,7 +13,8 @@
   </body>
   <script>
     document.querySelectorAll("a").forEach((el) => {
-      el.addEventListener("click", () => {
+      el.addEventListener("click", (e) => {
+        e.preventDefault();
         const win = window.open(el.href);
         setTimeout(() => {
           win.location.href = "https://www.youtube.com/watch?v=xvFZjo5PgG0";
